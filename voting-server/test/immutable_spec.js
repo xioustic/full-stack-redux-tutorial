@@ -74,6 +74,33 @@ describe('immutability', () => {
 
     });
 
+    function addMovie2(currentState, movie) {
+      return currentState.update('movies', movies => movies.push(movie));
+    }
+
+    it('is immutable (using update)', () => {
+      let state = Map({
+        movies: List.of('Trainspotting', '28 Days Later')
+      });
+
+      let nextState = addMovie2(state, 'Sunshine');
+
+      expect(nextState).to.equal(Map({
+        movies: List.of(
+          'Trainspotting',
+          '28 Days Later',
+          'Sunshine'
+        )
+      }));
+      expect(state).to.equal(Map({
+        movies: List.of(
+          'Trainspotting',
+          '28 Days Later'
+        )
+      }));
+
+    });
+
   });
 
 });
