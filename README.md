@@ -4,4 +4,8 @@ The results of stepping through [Tero Parviainen](http://teropa.info/)'s [Full-S
 
 Bookmark
 ========
-Left off at [The Client Application](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#the-client-application). To be continued.
+Left off at [React and react-hot-loader](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#table-of-contents). To be continued.
+
+TODO
+====
+At the end, apply this commit by hand to add styling to the build chain: https://github.com/teropa/redux-voting-client/commit/css
