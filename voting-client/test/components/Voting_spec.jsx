@@ -1,8 +1,10 @@
-import React from 'react/addons';
+import React from 'react';
+import ReactTestUtils from 'react-addons-test-utils';
+import ReactDOM from 'react-dom';
 import Voting from '../../src/components/Voting';
 import {expect} from 'chai';
 
-const {renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate} = React.addons.TestUtils;
+const {renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate} = ReactTestUtils;
 
 describe('Voting', () => {
 
@@ -29,6 +31,6 @@ describe('Voting', () => {
     Simulate.click(buttons[0]);
 
     expect(votedWith).to.equal('Trainspotting');
-  })
+  });
 
 });
