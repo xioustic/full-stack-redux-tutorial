@@ -39,13 +39,13 @@ export function next(state) {
   }
 }
 
-export function vote(state, entry) {
+export function vote(voteState, entry) {
   // reach into the nested data structure path ['vote', 'tally', entry]
   // apply this function there
   // if any keys missing along the path, create new maps in their place
   // if the value at the end is missing, initialize with 0 before applying function
-  return state.updateIn(
-    ['vote','tally', entry],
+  return voteState.updateIn(
+    ['tally', entry],
     0,
     v => v + 1
   )
