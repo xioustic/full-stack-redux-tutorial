@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
+import ReactDOM from 'react-dom';
 import {List, Map} from 'immutable';
 import Results from '../../src/components/Results';
 import {expect} from 'chai';
 
-const {renderIntoDocument, scryRenderedDOMComponentsWithClass}
-  = ReactTestUtils;
+const {renderIntoDocument, scryRenderedDOMComponentsWithClass,
+  Simulate} = ReactTestUtils;
 
 describe('Results', () => {
 
@@ -24,4 +25,19 @@ describe('Results', () => {
     expect(days).to.contain('28 Days Later');
     expect(days).to.contain('0');
   });
+
+  it('invokes the next callback when next button is clicked', () => {
+    let nextInvoked = false;
+    const next = () => nextInvoked = true;
+
+    const pair = List.of('Trainspotting', '28 Days Later');
+    const component = renderIntoDocument(
+      <Results pair={pair}
+               tally={Map()}
+               next={next}/>
+    );
+    Simulate.click(ReactDOM.findDOMNode(component.refs.next));
+
+    expect(nextInvoked).to.equal(true);
+  })
 });
