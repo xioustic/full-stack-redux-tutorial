@@ -28,6 +28,8 @@ const routes = (
 );
 
 ReactDOM.render(
-  <Router>{routes}</Router>,
+  <Provider store={store}>
+    <Router>{routes}</Router>
+  </Provider>,
   document.getElementById('app')
 )
