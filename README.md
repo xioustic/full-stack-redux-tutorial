@@ -4,7 +4,7 @@ The results of stepping through [Tero Parviainen](http://teropa.info/)'s [Full-S
 
 Bookmark
 ========
-Left off at [Writing The UI for The Results Screen And Handling Routing](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#table-of-contents). To be continued.
+Left off at [Introducing A Client-Side Redux Store](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#table-of-contents). To be continued.
 
 TODO
 ====
