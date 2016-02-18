@@ -6,14 +6,9 @@ const tally = Map({"Trainspotting": 5, "28 Days Later": 24});
 
 export default React.createClass({
   render: function() {
-    return (
-      <div>
-        <div>Hello from App.jsx!</div>
-        {React.cloneElement(this.props.children, {
-          pair: pair,
-          tally: tally
-        })}
-      </div>
-    );
+    return React.cloneElement(this.props.children, {
+      pair: pair,
+      tally: tally
+    });
   }
 });
