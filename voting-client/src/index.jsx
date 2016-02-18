@@ -5,6 +5,7 @@ import App from './components/App';
 import Voting from './components/Voting';
 import Results from './components/Results';
 
+require('./style.css');
 
 const routes = (
   <Route component={App}>
