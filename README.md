@@ -4,7 +4,7 @@ The results of stepping through [Tero Parviainen](http://teropa.info/)'s [Full-S
 
 Bookmark
 ========
-Left off at [Sending Actions To The Server Using Redux Middleware](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#table-of-contents). To be continued.
+Left off at [Exercises](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#table-of-contents). To be continued.
 
 TODO
 ====
